@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Áudio</title>
   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.7/plyr.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -11,7 +12,8 @@
     body {
       height: 100vh;
       overflow: hidden;
-      margin: 0px;
+      margin: 0;
+      padding: 0;
     }    
 
     .audio-container {
@@ -19,9 +21,12 @@
       align-items: center;
       justify-content: space-between;
       font-family: 'Open Sans', sans-serif;
-      justify-content: flex-start;
-      cursor: pointer; 
-      width: auto; /* Alterado para largura automática */
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px; /* Tamanho máximo ajustado para otimização em dispositivos móveis */
+      margin: 0 auto; /* Centralizar o contêiner */
+      padding: 10px;
+      box-sizing: border-box; /* Garantir que o padding não aumente a largura do contêiner */
     }
 
     .audio-container img {
@@ -30,13 +35,9 @@
       border-radius: 50%;
       object-fit: cover;
       padding-right: 8px;
-      padding-left: 10px;
     }
 
     .audio-container .microphone-icon {
-      position: relative;
-      margin-left: -67px;
-      margin-bottom: -25px;
       font-size: 22px;
       color: #4ad954;
     }
@@ -60,8 +61,7 @@
       border-radius: inherit;
       color: #4a5464;
       color: var(--plyr-audio-control-color,#4a5464);
-      margin-left: 0px;
-      padding: 0px;
+      padding: 0;
     }
 
     .plyr--audio .plyr__control--overlaid .plyr__control__icon {
@@ -115,11 +115,11 @@
   </style>
 </head>
 <body>
-  <div class="audio-container w-full" id="audioContainer"> <!-- Adicionado 'w-full' aqui -->
+  <div class="audio-container" id="audioContainer">
     <!-- Cole o link do Seu áudio Abaixo-->
-    <audio class="plyr" src="https://prod-media-bc.s3.amazonaws.com/media/46239/2605517/56825845/audio2.mp3"></audio>
+    <audio class="plyr" src="LINK-DO-SEU-ÁUDIO"></audio>
     <!-- Cole o link da Sua imagem Abaixo-->
-    <img src="https://s3.neobanks.cc/typebot/public/workspaces/clqp7gr0t0001mk1d3n32rdag/typebots/cls4xprgx000kpr1dlzuwwisj/hostAvatar?v=1706898999822" alt="Imagem">
+    <img src="https://i.imgur.com/cknxSJf.png" alt="Imagem">
     <div class="microphone-icon">
       <i class="fas fa-microphone"></i>
     </div>
